@@ -11,7 +11,6 @@ const add = (state, action) => {
         name: action.payload.name,
         price: action.payload.price,
     };
-    console.log('added')
     return {
         ...state,
         items: [...state.items, newItem],

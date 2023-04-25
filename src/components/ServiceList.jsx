@@ -1,8 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useState } from 'react';
 import { deleteItem } from '../actions'
 
-function ServiceList() {
+function ServiceList({ onChange }) {
     const items = useSelector(state => state.items);
     const dispatch = useDispatch();
 
@@ -11,7 +10,7 @@ function ServiceList() {
     }
 
     const handleChange = (id) => {
-        return id; //заглушка
+        onChange(id);
     }
 
     return (
@@ -21,7 +20,7 @@ function ServiceList() {
                 return (
                     <li className="w-500 flex justify-between items-center m-0 p-0 pl-8" key={item.id} >
                         <span className="flex">
-                            <p>{ item.name }</p> 
+                            <p className="mr-16">{ item.name + " "}</p> 
                             <p>{ item.price }</p>
                         </span>
                         <span className="flex">
