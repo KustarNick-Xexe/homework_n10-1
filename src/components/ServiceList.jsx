@@ -1,8 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
 import { deleteItem } from '../actions'
 
-function ServiceList({ onChange }) {
-    const items = useSelector(state => state.items);
+function ServiceList({ onChange, filter }) {
+    const items = useSelector(state => state.items.filter(item => {
+        if(filter === '') return true;
+        const name = item.name.toLowerCase();
+        const price = item.price.toLowerCase();
+        return name.includes(filter) || price.includes(filter);
+    }));
     const dispatch = useDispatch();
 
     const handleRemove = (id) => {
