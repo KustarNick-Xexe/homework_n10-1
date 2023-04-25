@@ -24,7 +24,8 @@ function App() {
 
   return (
     <div className=''>
-      { isVisible ? <ServiceChange id={ change } onChange={ handleChanged }/> : <ServiceAdd /> }
+      { isVisible ? <ServiceChange id={ change } onChange={ handleChanged }/>
+         : <ServiceAdd onChange={ handleFilterChanged }/> }
       <ServiceFilter onChange={ handleFilterChanged }/>
       <ServiceList onChange={ handleChange } filter={ filter }/>
     </div>

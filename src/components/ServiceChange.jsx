@@ -28,7 +28,7 @@ function ServiceChange({ id, onChange }) {
         <form className=' flex w-500' onSubmit={ handleSubmit }>
             <input className=' border border-slate-900 m-4' name='name' type='text' onChange={ handleChange } value={ name } />
             <input className=' border border-slate-900 m-4' name='price' type='number' onChange={ handleChange } value={ price } />
-            <button className=' bg-slate-900 text-gray-50 m-4 px-4 py-1' type='submit'>Change</button>
+            <button className=' bg-slate-900 text-gray-50 m-4 px-4 py-1' type='submit'>Save</button>
             <button className=' bg-slate-900 text-gray-50 m-4 px-4 py-1'onClick={ () => onChange() } >Cancel</button>
         </form>
     )

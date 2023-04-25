@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { useState } from 'react';
 import { addItem } from '../actions'
 
-function ServiceAdd() {
+function ServiceAdd({ onChange }) {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const dispatch = useDispatch();
@@ -11,6 +11,7 @@ function ServiceAdd() {
         event.preventDefault();
         const { name, price } = event.target;
         dispatch(addItem(name.value, price.value));
+        onChange('');
         setName('');
         setPrice('');
     };

@@ -14,8 +14,3 @@ export const updateItem = (id, name, price) => ({
     type: ACTION_TYPE.UPDATE_ITEM,
     payload: { id, name, price }
 });
-
-export const filterItems = (filter) => ({
-    type: ACTION_TYPE.UPDATE_ITEM,
-    payload: { filter }
-});

@@ -35,17 +35,6 @@ const update = (state, action) => {
     };
 };
 
-/* const filter = (state, action) => {
-    return {
-        ...state,
-        items: state.items.map((item) =>
-            item.id === action.payload.id
-            ? { ...item, name: action.payload.name, price: action.payload.price }
-            : item
-        ),
-    };
-}; */
-
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case ACTION_TYPE.ADD_ITEM:
