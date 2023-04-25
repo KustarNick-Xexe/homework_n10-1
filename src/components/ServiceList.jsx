@@ -1,13 +1,18 @@
+import { useSelector, useDispatch } from "react-redux";
+import { useState } from 'react';
+import { deleteItem } from '../actions'
 
 function ServiceList() {
-    const items = [];
+    const items = useSelector(state => state.items);
+    const dispatch = useDispatch();
+    console.log("Store: " + items);
 
     const handleRemove = (id) => {
-        return id;
+        dispatch(deleteItem(id));
     }
 
     const handleChange = (id) => {
-        return id;
+        return id; //заглушка
     }
 
     return (

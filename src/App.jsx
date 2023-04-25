@@ -4,7 +4,7 @@ import ServiceList from './components/ServiceList';
 function App() {
 
   return (
-    <div className='my-0 mx-auto'>
+    <div className=''>
       <ServiceAdd/>
       <ServiceList/>
     </div>

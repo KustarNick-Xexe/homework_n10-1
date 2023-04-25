@@ -11,7 +11,7 @@ const add = (state, action) => {
         name: action.payload.name,
         price: action.payload.price,
     };
-
+    console.log('added')
     return {
         ...state,
         items: [...state.items, newItem],
@@ -40,7 +40,7 @@ const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case ACTION_TYPE.ADD_ITEM:
             return add(state, action);
-        case ACTION_TYPE.REMOVE_ITEM:
+        case ACTION_TYPE.DELETE_ITEM:
             return remove(state, action);
         case ACTION_TYPE.UPDATE_ITEM:
             return update(state, action);
