@@ -5,7 +5,6 @@ import { deleteItem } from '../actions'
 function ServiceList() {
     const items = useSelector(state => state.items);
     const dispatch = useDispatch();
-    console.log("Store: " + items);
 
     const handleRemove = (id) => {
         dispatch(deleteItem(id));
@@ -20,11 +19,16 @@ function ServiceList() {
         {
             items.map(item => {
                 return (
-                    <li key={item.id} >{ item.name } { item.price }
-                        <button onClick={ () => handleRemove( item.id ) }>
+                    <li className=" w-100 flex justify-center items-center" key={item.id} >
+                        { item.name } { item.price }
+                        <button 
+                            className=' bg-slate-900 text-gray-50 m-4 px-4 py-1'
+                            onClick={ () => handleChange( item.id ) }>
                             Change
                         </button>
-                        <button onClick={ () => handleChange( item.id ) }>
+                        <button 
+                            className=' bg-slate-900 text-gray-50 m-4 px-4 py-1'
+                            onClick={ () => handleRemove( item.id ) }>
                             Delete
                         </button>
                     </li>)

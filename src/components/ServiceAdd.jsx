@@ -23,10 +23,10 @@ function ServiceAdd() {
     };
 
     return (
-        <form onSubmit={ handleSubmit }>
-            <input name='name' type='text' onChange={ handleChange } value={ name } />
-            <input name='price' type='text' onChange={ handleChange } value={ price } />
-            <button type='submit'>Save</button>
+        <form className=' my-0 mx-auto' onSubmit={ handleSubmit }>
+            <input className=' border border-slate-900 m-4' name='name' type='text' onChange={ handleChange } value={ name } />
+            <input className=' border border-slate-900 m-4' name='price' type='text' onChange={ handleChange } value={ price } />
+            <button className=' bg-slate-900 text-gray-50 m-4 px-4 py-1' type='submit'>Save</button>
         </form>
     )
   }
